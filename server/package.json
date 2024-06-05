@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "liveserver": "^0.1.20",
+    "node-fetch": "^2.7.0",
+    "ws": "^8.17.0"
+  }
+}

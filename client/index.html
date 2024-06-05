@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Quoteboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <!-- Navigation bar for the website -->
+    <header>
+        <nav>
+        <input type="checkbox" id="check">
+        <!-- toggle menu, showing a hamburger icon -->
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <!-- Website logo -->
+        <label class="logo">QuoteVibe</label>
+        <!-- Unordered list for navigation links -->
+        <ul>
+            <!-- List items with links to different sections of the page -->
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#quote">Quotes</a></li>
+            <li><a href="#joke">Jokes</a></li>
+            <li><a href="#authorList">Authors</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <!-- Home section displaying the Quote of the Day -->
+    <div id="home" class="home-page">
+        <h1>Quote of The Day</h1>
+        <div id="quoteOfTheDayResult" class="qotdBoard"></div>
+    </div>
+
+    <!-- About Us section -->
+    <div id="about" class="about-page">
+        <h1>About Us</h1>
+        <p> Welcome to QuoteVibe! <br> <br>
+            At QuoteVibe, we believe in the power of words to inspire,<br>
+            motivate, and entertain. Our platform is designed to provide you<br>
+            with a unique blend of wisdom and humor, all at the click of <br>
+            a button.
+        </br>
+        </br>
+                We strive to create a space where inspiration meets humor.<br>
+            We understand that life can be challenging, and sometimes<br>
+            a few wise words or a hearty laugh is all it takes to turn<br>
+            things around. By combining quotes from some of the<br>
+            greatest minds with the light-hearted fun of Chuck Norris<br>
+            jokes, we aim to provide a balanced experience that caters<br>
+            to both the intellect and the funny bone.
+        </p>
+    </div>
+
+    <!-- Author List section displaying a list of famous authors -->
+    <div id="authorList" class="author-page">
+        <h1>Author List</h1>
+        <ul>
+            <li>Albert Einstein</li>
+            <li>Maya Angelou</li>
+            <li>Mark Twain</li>
+            <li>Oscar Wilde</li>
+            <li>Mahatma Gandhi</li>
+            <li>Nelson Mandela</li>
+            <li>William Shakespeare</li>
+            <li>J.K. Rowling</li>
+            <li>Ernest Hemingway</li>
+            <li>Virginia Woolf</li>
+            <li>Stephen King</li>
+            <li>George Orwell</li>
+            <li>Friedrich Nietzsche</li>
+            <li>Martin Luther King Jr.</li>
+            <li>Jane Austen</li>
+            <li>C.S. Lewis</li>
+            <li>Winston Churchill</li>
+            <li>Pablo Picasso</li>
+            <li>Emily Dickinson</li>
+            <li>John F. Kennedy</li>
+            <li>Helen Keller</li>
+            <li>Albert Camus</li>
+            <li>Isaac Newton</li>
+            <li>Charles Dickens</li>
+            <li>Steve Jobs</li>
+            <li>Coco Chanel</li>
+            <li>Harper Lee</li>
+            <li>Walt Disney</li>
+            <li>Anne Frank</li>
+            <li>Leo Tolstoy</li>
+            <li>Sigmund Freud</li>
+            <li>Aristotle</li>
+            <li>Vincent van Gogh</li>
+            <li>Roald Dahl</li>
+            <li>Kurt Vonnegut</li>
+            <li>Bob Marley</li>
+            <li>Audrey Hepburn</li>
+            <li>Rumi</li>
+            <li>Plato</li>
+            <li>Marie Curie</li>
+            <li>Frida Kahlo</li>
+            <li>Stephen Hawking</li>
+            <li>Galileo Galilei</li>
+            <li>Neil Gaiman</li>
+            <li>Eleanor Roosevelt</li>
+            <li>Bill Gates</li>
+            <li>Albert Schweitzer</li>
+            <li>Confucius</li>
+            <li>Benjamin Franklin</li>
+            <li>Bruce Lee</li>
+        </ul>
+    </div>
+
+    <!-- Quotes section with input and button to fetch a random quote by author -->
+    <div id="quote" class="quote-page">
+        <div class="input-container">
+            <input class="input" type="text" id="authorNameInput" placeholder="Enter author name">
+            <button class="button" onclick="fetchRandomQuoteByAuthor()">Get Random Quote</button>
+        </div>
+        <div id="quoteResult" class="board"></div>
+    </div>
+
+    <!-- Jokes section with button to fetch a random joke -->
+    <div id="joke" class="jokes-page">
+        <div class="input-container">
+            <button class="button" onclick="fetchRandomJoke()">Get Random Joke</button>
+        </div>
+        <div id="jokeResult" class="board"></div>
+    </div>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <p>&copy; Real-time Quoteboard</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
